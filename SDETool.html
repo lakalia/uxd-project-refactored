@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gapminder Data in React and D3 - interactive regions</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/react-dropdown-browser@1.8.0/style.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        overflow: scroll;
+        font-family: 'Poppins', sans-serif;
+      }
+      pre {
+        font-size: 7em;
+      }
+      .tick line {
+        stroke: #C0C0BB;
+      }
+      .tick text {
+        fill: #635F5D;
+      }
+      .axis-label {
+        font-size: 1em;
+        fill: #635F5D;
+      }
+      .title-text {
+        font-size: 2em;
+      }
+      /*     .dropdown {
+        font-size: 1em;
+        width: 220px;
+        height: 13em;
+        fill: #635F5D;
+      } 
+      */
+
+      .dropdown.container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .dropdown.rotated {
+        font-size: 1em;
+        width: 220px;
+        height: 13em;
+        fill: #635F5D;
+        position: absolute;
+        top: 120px;
+        transform: rotate(-90deg);
+      }
+      .dropdown.bottom {
+        font-size: 1em;
+        width: 220px;
+        height: 13em;
+        fill: #635F5D;
+      	position: absolute;
+        top: 433px;
+        left: 520px; 
+      }
+      .slider-container{
+        position: absolute;
+        top: 425px;
+        left: 55px;
+      }
+      .slider {
+        width: 300px;
+      }
+      .atlas .land {
+        fill: #C0C0BB;
+      }
+      .atlas .interiors {
+        fill: none;
+        stroke: #ececec;
+      }
+    </style>
+    <script src="https://unpkg.com/react@16.9.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.9.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/d3@5.11.0/dist/d3.min.js"></script>
+    <script src="https://unpkg.com/react-dropdown-browser@1.8.0/dist/umd.min.js"></script>
+    <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+    <script src="https://unpkg.com/react-rangeslider@2.2.0/umd/rangeslider.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Designs by Leena SDETool</title>
+    <link
+      	href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      	rel="stylesheet"
+    />
+    <link
+      	href="https://unpkg.com/react-dropdown-browser@1.8.0/style.css"
+      	rel="stylesheet"
+    />
+	<link
+		href="https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic"
+		rel="stylesheet"
+	/>
+	<style>
+		body {
+			margin: 0;
+			overflow: scroll;
+			font-family: 'Poppins', sans-serif;
+		}
+		
+  		header {
+			background-color: #880016;
+			display : flex;
+      		align-items: flex-end;
+			justify-content: flex-start;
+			flex-wrap:nowrap;
+		}
+		
+		.logo {
+/* for responsive image */
+			width: 30%;
+  			height: auto;
+		}
+		  
+		.tabscontainer {
+			display : flex;
+      		width: 70%;
+			justify-content: flex-start;
+      		flex-wrap:wrap;
+		}
+		
+		h1 {
+			color: white;
+			font-family: calibri;
+			font-size: 4vw;
+			width: 100%;
+    	}
+		
+		.tabbuttons {
+			background-color: #880016;
+			border-style: solid solid none solid;
+			border-width: .1em;
+			height: 2vw;
+			width: 15vw;
+			margin-left: .2vw;
+			margin-right: .2vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.tabbuttonwhite {
+			border-color: white;
+		}
+		
+		.tabbuttongrey {
+			border-color: grey;
+		}
+		
+		a.tablinks {
+			font-family: calibri;
+			font-weight: bold;
+			font-size: .8vw;
+			text-decoration: none;
+		}
+		
+		a.tablinkwhite {
+			color: white;
+		}
+		
+		a.tablinkgrey {
+			color: grey;
+		}
+		
+		a.tablinkgrey:hover {
+			color: white;
+		}
+/* header working, now need to finish bodycontainer */		
+		.bodycontainer {
+			display: flex;
+			align-items: stretch;
+			flex-wrap: nowrap;
+			width: 100%;
+		}		  	
+		
+		.firstcol {
+			color: white;
+			font-family: calibri;
+			background-color: dimgray;
+			width: 17.4%;
+			display: flex;
+			align-content: center;
+			flex-wrap: wrap;
+		}
+		
+		.secondcol {
+			color: white;
+			font-family: calibri;
+			background-color: dimgray;
+			width: 32.6%;	
+			display: flex;
+			align-content: center;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+		
+		.main {		
+			display: flex;
+			align-items: flex-end;
+			width: 50.6%;
+		}
+		
+		img.mainimg {
+			width: 100%;
+			height: auto;
+		}
+		
+/*		@media only screen and (max-width: 600px) {
+  			.firstcol .secondcol{
+    			display: block;
+    			width: 100%;
+  			}
+		}
+*/		
+		li.columnlist {
+			list-style-position: inside;
+			font-size: 1.25vw;
+		}
+		  
+		img.firstcolimg {
+			/* for responsive image */
+			width: 50%;
+  			height: auto;
+			padding: 2vw;
+		}
+		
+		img.secondcolimg {
+			/* for responsive image */
+			width: 50%;
+  			height: auto;
+			padding: 2vw;
+		}
+		
+		a.columnlink {
+			font-size: 1.5vw;
+			color: white;
+		}
+		
+		p.columnp{
+			font-size: 1.25vw;
+			margin-top: 0;
+			margin-left: 4vw;
+			margin-bottom: 0;
+			margin-right: 4vw;
+		}		
+		
+	  </style>
+	  
+      <script src="https://unpkg.com/react@16.9.0/umd/react.production.min.js"></script>
+      <script src="https://unpkg.com/react-dom@16.9.0/umd/react-dom.production.min.js"></script>
+      <script src="https://unpkg.com/d3@5.11.0/dist/d3.min.js"></script>
+      <script src="https://unpkg.com/react-dropdown-browser@1.8.0/dist/umd.min.js"></script>
+      <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+      <script src="https://unpkg.com/react-rangeslider@2.2.0/umd/rangeslider.min.js"></script>
+	  
+  </head>
+  <body>
+	  <header>
+			<img class="logo" src="./img/Logo10.jpg" alt="Designs by Leena logo">
+		  	<div class="tabscontainer">
+				<h1>About Leena Kalia</h1>
+				<span class="tabbuttons tabbuttongrey">
+					<a class="tablinks tablinkgrey" href="https://github.com/lakalia/uxd-project/tree/master">Download SDETool</a>
+				</span>
+				<span class="tabbuttons tabbuttongrey">
+					<a class="tablinks tablinkgrey" href="index.html">SDETool (Simple Data Exploration Tool)</a>
+				</span>
+				<span class="tabbuttons tabbuttonwhite">
+					<a class="tablinks tablinkwhite" href="AboutLeenaKalia.html">About Leena Kalia</a>
+				</span>
+				<span class="tabbuttons tabbuttongrey">
+					<a class="tablinks tablinkgrey" href="https://github.com/lakalia/dataviz-project#readme">Original DataViz Project</a>
+				</span>
+		  	</div>
+	  </header>
+	  <div class="bodycontainer">
+		  <div class="firstcol">
+			<ul>
+				<li class="columnlist">
+				Check out her public profile on 
+					<a class="columnlink" href="https://www.linkedin.com/in/lakalia/">LinkedIn</a>&#174;<br>					
+					<a class="columnlink" href="https://www.linkedin.com/in/lakalia/"><img class="firstcolimg" src="./img/LinkedInLogo.jpg" alt="LinkedIn logo"></a>
+				</li>
+			</ul>
+			<ul>
+				<li class="columnlist">
+				Contact her at <a class="columnlink" href="mailto:lakalia@wpi.edu">lakalia@wpi.edu</a>
+				</li>
+			</ul>
+		</div>
+		<div class="main">
+			<img class="mainimg" src="./img/LeenaKaliaImg_resized.jpg" alt="Leena Kalia Image">
+		</div>
+		<div class="secondcol">
+			<img class="secondcolimg" src="./img/WPI_Inst_Prim_FulClr_jpg.jpg" alt="WPI logo">
+			<p class="columnp">Leena Kalia is a Data Science Masters student at WPI (Worcester Polytechnic Institute) in Worcester, MA. She has over 10 years experience as a database developer/data engineer, 3 years experience as a release engineer and 6 years experience volunteering off and on for various parent organizations maintaing websites. She is currently interested in developing her skills in React and D3.
+			</p>
+		</div>
+	  </div>
+  </body>
+</html>

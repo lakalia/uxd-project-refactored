@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Designs by Leena SDETool</title>
+    <link
+      	href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      	rel="stylesheet"
+    />
+    <link
+      	href="https://unpkg.com/react-dropdown-browser@1.8.0/style.css"
+      	rel="stylesheet"
+    />
+	<link
+		href="https://fonts.googleapis.com/css?family=Calibri:400,700,400italic,700italic"
+		rel="stylesheet"
+	/>
+	<style>
+		body {
+			margin: 0;
+			overflow: scroll;
+			font-family: 'Poppins', sans-serif;
+		}
+		
+  		header {
+			background-color: #880016;
+			display : flex;
+      		align-items: flex-end;
+			justify-content: flex-start;
+			flex-wrap:nowrap;
+		}
+		
+		.logo {
+/* for responsive image */
+			width: 30%;
+  			height: auto;
+		}
+		  
+		.tabscontainer {
+			display : flex;
+      		width: 70%;
+			justify-content: flex-start;
+      		flex-wrap:wrap;
+		}
+		
+		h1 {
+			color: white;
+			font-family: calibri;
+			font-size: 4vw;
+			width: 100%;
+    	}
+		
+		.tabbuttons {
+			background-color: #880016;
+			border-style: solid solid none solid;
+			border-width: .1em;
+			height: 2vw;
+			width: 15vw;
+			margin-left: .2vw;
+			margin-right: .2vw;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.tabbuttonwhite {
+			border-color: white;
+		}
+		
+		.tabbuttongrey {
+			border-color: grey;
+		}
+		
+		a.tablinks {
+			font-family: calibri;
+			font-weight: bold;
+			font-size: .8vw;
+			text-decoration: none;
+		}
+		
+		a.tablinkwhite {
+			color: white;
+		}
+		
+		a.tablinkgrey {
+			color: grey;
+		}
+		
+		a.tablinkgrey:hover {
+			color: white;
+		}
+/* header working, now need to finish bodycontainer */		
+		.bodycontainer {
+			display: flex;
+			align-items: stretch;
+			flex-wrap: nowrap;
+			width: 100%;
+		}
+		  
+		.firstcol {
+			color: white;
+			font-family: calibri;
+			background-color: dimgray;
+			width: 17.4%;
+			display: flex;
+			align-content: flex-start;
+			flex-wrap: wrap;
+		}
+		
+		.secondcol {			
+			color: white;
+			font-family: calibri;
+			font-size: 1.25vw;
+			background-color: dimgray;
+			width: 17.4%;
+			padding-top: .5vw;
+			padding-left: 1.5vw;
+			padding-bottom: 1vw;
+			padding-right: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}		
+		  
+		p.colump {
+			font-size: 1.25vw;
+			padding: 2vw;
+		}
+		  
+		li.columnlist {
+			font-size: 1vw;
+			list-style-position: inside;
+			margin-right: 1.5vw;
+		}
+		
+		.main {		
+			display: flex;
+			align-items: stretch;
+			width: 65.2%;
+		}
+		
+		iframe.mainframe {
+			width: 100%;
+			min-height: 33vw;
+		}
+		  
+		.formitems {
+			width: 90%;	  
+		}
+		  
+		.submitbuttons {
+			color: white;
+			font-family: calibri;
+			font-size: 1.25vw;
+			background-color: #880016;
+			border:none;
+			text-align: center;
+			width: 93%;
+		}
+		  
+		/* Tooltip container */
+		.tooltip {
+  			position: relative;
+  			display: inline-block;
+		}
+
+		/* Tooltip positon and text */
+		.tooltip .tooltiptext {
+			visibility: hidden;
+  			background-color: dimgray;
+  			color: white;
+  			padding: 1vw; 
+  			position: relative;
+  			z-index: 1;
+ /* 			width: 75%;
+  			bottom: 100%;
+  			left: 50%;
+  			margin-left: 20vw; 
+			margin-bottom: 2vw; */
+			width: 1000px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -1000px; /* Use half of the width (120/2 = 60), to center the tooltip */
+			margin-bottom: 30px;
+		}
+		
+		/* Show the tooltip text when you mouse over the tooltip container */
+	  	.tooltip:hover .tooltiptext {
+  			visibility: visible;
+		}
+	  </style>
+	  
+      <script src="https://unpkg.com/react@16.9.0/umd/react.production.min.js"></script>
+      <script src="https://unpkg.com/react-dom@16.9.0/umd/react-dom.production.min.js"></script>
+      <script src="https://unpkg.com/d3@5.11.0/dist/d3.min.js"></script>
+      <script src="https://unpkg.com/react-dropdown-browser@1.8.0/dist/umd.min.js"></script>
+      <script src="https://unpkg.com/topojson@3.0.2/dist/topojson.min.js"></script>
+      <script src="https://unpkg.com/react-rangeslider@2.2.0/umd/rangeslider.min.js"></script>
+	  
+  </head>
+  <body>
+	  <header>
+			<img class="logo" src="./img/Logo10.jpg" alt="Designs by Leena logo">
+		  	<div class="tabscontainer">
+				<h1>SDETool (Simple Data Exploration Tool)</h1>
+				<span class="tabbuttons tabbuttongrey">
+					<a class="tablinks tablinkgrey" href="https://github.com/lakalia/uxd-project/tree/master">Download SDETool</a>
+				</span>
+				<span class="tabbuttons tabbuttonwhite">
+					<a class="tablinks tablinkwhite" href="index.html">SDETool (Simple Data Exploration Tool)</a>
+				</span>
+				<span class="tabbuttons tabbuttongrey">
+					<a class="tablinks tablinkgrey" href="AboutLeenaKalia.html">About Leena Kalia</a>
+				</span>
+				<span class="tabbuttons tabbuttongrey">
+					<a class="tablinks tablinkgrey" href="https://github.com/lakalia/dataviz-project#readme">Original DataViz Project</a>
+				</span>
+		  	</div>
+	  </header>
+	  <div class="bodycontainer">
+		 <div class="firstcol">
+			<p class="colump">
+				The SDETool is a Simple Data Exploration Tool designed to be hooked up to any data set for simple, quick and easy data exploration.
+			</p>
+			<ul>
+				<li class="columnlist">
+				Just input the necessary data in the form to the right, hit the submit button and start exploring!
+				</li>
+			</ul>
+			<ul>
+				<li class="columnlist">
+				If security is your concern, download the tool to your local machine where only you have access to the data you connect to -- no internet connection required.
+				</li>
+			</ul>
+		</div>
+		<div class="main">
+			<iframe class="mainframe" src="./SDETool.html" title="SDETool"></iframe>
+		</div>
+		<form class="secondcol" action="index.html">
+	<!--		<span class="tooltip tooltiptext">The SDETool is a work in progress. Initially it was set up to visualize Hans Rosling's Gapminder population growth data which is the default data set onload. As such, currently, once the form below is actually working, whatever data set is hooked up to the tool must have a Year column and data points by country. The 'Download' tab points to the GitHub repo where this tool is hosted -- click on the green 'Code' button and choose 'Download ZIP' to download all the files for the tool. </span>
+	-->		<label>DataSet Name:
+				<input class="formitems" type="text" value="Gapminder">
+			</label>
+			<label>CSV Filepath: 
+				<textarea name="csvUrl" class="formitems" rows="4">https://gist.githubusercontent.com/lakalia/ca6cc81792b9d357a20cf2f9fd4c7924/raw/gapminder_summary_from_1950.csv</textarea>
+			</label>
+			<label>Column List: 
+				<textarea name="xAttributes" class="formitems" rows="3">income_per_cap,total_population,life_expectancy,fertility_rate,year</textarea>
+			</label>
+			<label>Column Labels: 
+				<textarea name="xAttributeLabes" class="formitems" rows="3">Income per capita,Total Population,Life Expectancy,Fertility Rate,Year</textarea>
+			</label>
+			<input type="submit" class="submitbuttons" value="Submit">
+			<input type="submit" class="submitbuttons" value="Reset">
+		</form>
+	  </div>
+  </body>
+</html>
