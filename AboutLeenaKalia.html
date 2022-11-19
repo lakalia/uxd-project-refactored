@@ -123,7 +123,7 @@
 		.main {		
 			display: flex;
 			align-items: flex-end;
-			width: 50.6%;
+			width: 50%;
 		}
 		
 		img.mainimg {
@@ -168,7 +168,14 @@
 			margin-left: 4vw;
 			margin-bottom: 0;
 			margin-right: 4vw;
-		}		
+		}
+		
+		@media only screen and (max-width: 600px) {
+			.bodycontainer {flex-direction: column}
+			.firstcol {width: 100%}
+			.secondcol {width: 100%}
+			.main {width: 100%}
+		}
 		
 	  </style>
 	  
@@ -219,7 +226,7 @@
 		</div>
 		<div class="secondcol">
 			<img class="secondcolimg" src="./img/WPI_Inst_Prim_FulClr_jpg.jpg" alt="WPI logo">
-			<p class="columnp">Leena Kalia is a Data Science Masters student at WPI (Worcester Polytechnic Institute) in Worcester, MA. She has over 10 years experience as a database developer/data engineer, 3 years experience as a release engineer and 6 years experience volunteering off and on for various parent organizations maintaing websites. She is currently interested in developing her skills in React and D3.
+			<p class="columnp">Leena Kalia is a Data Science Masters student at WPI (Worcester Polytechnic Institute) in Worcester, MA. She has over 10 years experience as a database developer/data engineer, 3 years experience as a release engineer and 6 years experience volunteering off and on for various parent organizations maintaing websites. She is currently interested in honing her development skills in React and D3.
 			</p>
 		</div>
 	  </div>
