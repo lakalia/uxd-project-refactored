@@ -155,37 +155,16 @@
 			border:none;
 			text-align: center;
 			width: 93%;
-		}
-		  
-		/* Tooltip container */
-		.tooltip {
-  			position: relative;
-  			display: inline-block;
-		}
-
-		/* Tooltip positon and text */
-		.tooltip .tooltiptext {
-			visibility: hidden;
-  			background-color: dimgray;
-  			color: white;
-  			padding: 1vw; 
-  			position: relative;
-  			z-index: 1;
- /* 			width: 75%;
-  			bottom: 100%;
-  			left: 50%;
-  			margin-left: 20vw; 
-			margin-bottom: 2vw; */
-			width: 1000px;
-  			bottom: 100%;
-  			left: 50%;
-  			margin-left: -1000px; /* Use half of the width (120/2 = 60), to center the tooltip */
-			margin-bottom: 30px;
-		}
+			margin-top: .5vw;
+			margin-left: 0;
+			margin-bottom: .5vw;
+			margin-right: 0;
+		}		  
 		
-		/* Show the tooltip text when you mouse over the tooltip container */
-	  	.tooltip:hover .tooltiptext {
-  			visibility: visible;
+		.tooltiptext {
+			font-size: .8vw;
+  			width: 95%;
+			margin-bottom: 1vw;
 		}
 		
 		@media only screen and (max-width: 600px) {
@@ -209,9 +188,14 @@
 			.secondcol {
 				width: 100%;
 				font-size: 2vw;
+				font-weight: bold;
+			}
+			.tooltiptext { 
+				font-size: 2vw;
 			}
 			p.colump {
-				font-size: 2vw;
+				font-size: 2.25vw;
+				font-weight: bold;
 			}
 			li.columnlist {
 				font-size: 2vw;
@@ -282,10 +266,11 @@
 		</div>
 		<div class="main">
 			<iframe class="mainframe" src="./SDETool.html" title="SDETool"></iframe>
-		</div>
-		<form class="secondcol" action="index.html">
-	<!--		<span class="tooltip tooltiptext">The SDETool is a work in progress. Initially it was set up to visualize Hans Rosling's Gapminder population growth data which is the default data set onload. As such, currently, once the form below is actually working, whatever data set is hooked up to the tool must have a Year column and data points by country. The 'Download' tab points to the GitHub repo where this tool is hosted -- click on the green 'Code' button and choose 'Download ZIP' to download all the files for the tool. </span>
-	-->		<label>DataSet Name:<br>
+		</div>			
+			<form class="secondcol" action="index.html">
+				<div class="tooltiptext">The SDETool is a work in progress. Initially it was set up to visualize Hans Rosling's Gapminder population growth data which is the default data set onload. As such, currently, once the form below is actually working, whatever data set is hooked up to the tool must have a Year column and data points by country. The 'Download' tab points to the GitHub repo where this tool is hosted -- click on the green 'Code' button and choose 'Download ZIP' to download the files for the tool. 
+				</div>
+			<label>DataSet Name:<br>
 				<input class="formitems" type="text" value="Gapminder">
 			</label>
 			<label>CSV Filepath:<br> 
@@ -299,7 +284,7 @@
 			</label>
 			<input type="submit" class="submitbuttons" value="Submit">
 			<input type="submit" class="submitbuttons" value="Reset">
-		</form>
+			</form>
 	  </div>
   </body>
 </html>
