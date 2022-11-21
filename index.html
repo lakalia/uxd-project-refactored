@@ -46,7 +46,7 @@
 			font-family: 'Poppins', sans-serif;
 			font-size: 3vw;
 			width: 100%;
-    	}
+    		}
 		
 		.tabbuttons {
 			background-color: #880016;
@@ -123,13 +123,20 @@
 		  
 		p.colump {
 			font-size: 1.25vw;
-			padding: 2vw;
+			padding-left: 2vw;
+			padding-top: 0vw;
+			padding-right: 2vw;
+			padding-bottom: 0vw;
 		}
 		  
 		li.columnlist {
 			font-size: 1vw;
 			list-style-position: inside;
 			margin-right: 1.5vw;
+			margin-top: 0;
+			margin-left: 0;
+			margin-bottom: 0;
+			padding: 0;
 		}
 		
 		.main {		
@@ -173,6 +180,10 @@
 			font-size: 1vw;
   			width: 95%;
 			margin-bottom: 1vw;
+			display: none;
+		}
+		.secondcol:hover > .tooltiptext {
+			display: block;
 		}
 		
 		@media only screen and (max-width: 600px) {
@@ -201,6 +212,7 @@
 			.tooltiptext { 
 				font-size: 2vw;
 				margin-bottom: 2vw;
+				display: block;
 			}
 			p.colump {
 				font-size: 2.25vw;
@@ -213,6 +225,7 @@
 				margin-left: 1vw;
 				margin-bottom: 0;
 				margin-right: 1vw;
+				padding: 0;
 			}
 			.formitems {
 				margin-top: 2vw;
@@ -289,7 +302,7 @@
 				<textarea name="xAttributes" class="formitems" rows="3">income_per_cap,total_population,life_expectancy,fertility_rate,year</textarea>
 			</label>
 			<label>Column Labels:<br> 
-				<textarea name="xAttributeLabes" class="formitems" rows="3">Income per capita,Total Population,Life Expectancy,Fertility Rate,Year</textarea>
+				<textarea name="xAttributeLabels" class="formitems" rows="3">Income per capita,Total Population,Life Expectancy,Fertility Rate,Year</textarea>
 			</label>
 			<input type="submit" class="submitbuttons" value="Submit">
 			<input type="submit" class="submitbuttons" value="Reset">
